@@ -1,0 +1,45 @@
+{
+  "name": "roam",
+  "version": "1.0.0",
+  "description": "A travel community ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "create:db": "createdb roam",
+    "drop:db": "dropdb roam",
+    "load:db": "psql roam < ./src/db/schema.sql",
+    "load:session": "psql roam < node_modules/connect-pg-simple/table.sql",
+    "seed:db": "psql roam < ./src/db/seed/seed.sql",
+    "test": "mocha ./test --recursive --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "roam"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "James McCormack",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-pg-simple": "^4.2.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "nodemon": "^1.12.1",
+    "pg-promise": "^7.3.1"
+  },
+  "devDependencies": {
+    "ajv": "^5.2.2",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0"
+  }
+}

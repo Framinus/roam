@@ -1,0 +1,30 @@
+<%-include ./partials/header.ejs %>
+
+<div class="profile-container">
+  <div class="profile-column">
+    <img class="user user-pic" src="<%= profile.image_url %>">
+    <div class="user user-name"><%= profile.name %></div>
+    <div class="user current-city">Oakland</div>
+    <div class="user edit-profile">
+      <button type="button" class="edit-profile-btn">Edit Profile</button>
+    </div>
+  </div>
+  <div class="posts-column">
+      <div class="posts-row">
+          <div class="post-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div class="icon-column">
+            <i class="profile-icon fa fa-pencil" aria-hidden="true"></i>
+            <i class="profile-icon fa fa-trash" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="posts-row">
+          <div class="post-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div class="icon-column">
+            <i class="profile-icon fa fa-pencil" aria-hidden="true"></i>
+            <i class="profile-icon fa fa-trash" aria-hidden="true"></i>
+          </div>
+      </div>
+  </div>
+</div>
+
+<%-include ./partials/footer.ejs %>

@@ -1,0 +1,12 @@
+<%- include ../partials/header.ejs %>
+
+<form class="signup-form" action="/auth/signup" method="post">
+  <input type="text" name="name" placeholder="Your Name">
+  <input type="text" name="email" placeholder="Your Email">
+  <input type="password" name="password" placeholder="Password">
+  <button type="submit">Submit</button>
+</form>
+<p><%= badInfo %></p>
+
+
+<%- include ../partials/footer.ejs %>

@@ -1,0 +1,198 @@
+
+.link-text {
+  color: #fff;
+}
+
+.link-text:hover {
+  color: rgb(212, 255, 175);
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.navbar-right {
+  color: #fff;
+}
+
+.logout-btn {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+
+.parallax {
+  align-items: center;
+  background-image: url('https://blog.storage.com/wp-content/uploads/2015/05/How-to-Find-Cheap-New-York-City-Storage-large.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 750px;
+}
+
+.welcome {
+  align-items: center;
+  border-radius: 10px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 1em;
+  padding: 10px;
+}
+
+.login-prompt {
+  color: #000;
+  margin-top: 70px;
+}
+
+.main-link {
+  background-color: rgb(31, 6, 3);
+  border-style: groove;
+  border-width: 2px;
+  color: #fff;
+  font-size: 24px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-column {
+  align-items: center;;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;;
+  margin: 20px;
+  min-width: 25%;
+}
+
+.posts-column {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.posts-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-body {
+  margin: 20px;
+}
+
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 30px;
+}
+
+.user {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.user-pic {
+  border: 1px solid grey;
+  height: 125px;
+  margin-top: 10px;
+  width: 125px;
+}
+
+.profile-icon {
+  color: rgb(29, 8, 97);
+  margin: 5px;
+}
+
+.edit-profile-btn {
+  background-color:  rgb(29, 8, 97);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.city-image {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+
+.city-image-hk {
+  background-image: url('http://finedininglovers.cdn.crosscast-system.com/BlogPost/xl_5700_hong-kong-city-tasting-tour.jpg');
+}
+
+.city-image-ny {
+  background-image: url('https://media.architecturaldigest.com/photos/5699802bc6772b7614567435/2:1/w_2560/new-york-city-guide.jpg');
+}
+
+.city-image-oak {
+  background-image: url('http://www.acsbdc.org/sites/default/files/styles/slider/public/150514_7534_Downtown_Oakland_Morning_Skyline_%20%281%29%20Photo%20by%20Greg%20Linhares%2C%20City%20of%20Oakland_0.jpg?itok=cZ-WVCAN');
+}
+
+.city-info {
+  margin: 20px;
+}
+
+.city-blurb {
+  font-style: italic;
+}
+
+.posts {
+  border-top: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  padding-top: 10px;
+}
+
+.post-mini-profile {
+  align-items: flex-start;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  /*margin: 20px;*/
+  min-width: 15%;
+  max-width: 15%;
+  padding: 10px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  margin: 10px;
+}
+
+.mini-image {
+  align-self: center;
+}
+
+.mini-username {
+  align-self: center;
+}
