@@ -42,5 +42,13 @@ const getUserProfileAndReviews = (id) => {
     });
 };
 
+const editUserProfile = (id, name, currentcity, imageUrl) => {
+  return db.one(`
+    UPDATE users
+    SET name=$2, current_city=$3, image_url=$4
+    WHERE id=$1
+    `, [id, name, currentcity, imageUrl]);
+};
 
-module.exports = { createUser, deleteUser, getUserProfileAndReviews, validateUser };
+
+module.exports = { createUser, deleteUser, editUserProfile, getUserProfileAndReviews, validateUser };
