@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const getUserProfile = require('../db/users.js').getUserProfile;
+const getUserProfileAndReviews = require('../db/users.js').getUserProfileAndReviews;
 
 router.get('/', (req, res) => {
   if (req.session.user) {
     const { user } = req.session;
-    getUserProfile(user)
+    getUserProfileAndReviews(user)
       .then((profile) => {
         res.render('profile', { profile });
       })

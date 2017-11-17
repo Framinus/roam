@@ -1,3 +1,4 @@
+/*main and auth pages */
 
 .link-text {
   color: #fff;
@@ -90,6 +91,8 @@
   padding-right: 10px;
 }
 
+/*profile page*/
+
 .profile-container {
   display: flex;
   flex-direction: row;
@@ -97,7 +100,7 @@
 
 .profile-column {
   align-items: center;;
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -156,6 +159,8 @@
   color: #fff;
 }
 
+/*city pages */
+
 .city-image {
   background-attachment: fixed;
   background-position: center;
@@ -194,7 +199,7 @@
 
 .post-mini-profile {
   align-items: flex-start;
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -203,6 +208,11 @@
   min-width: 15%;
   max-width: 15%;
   padding: 10px;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .post-content {
