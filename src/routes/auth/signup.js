@@ -10,10 +10,10 @@ router.route('/')
   })
 
   .post((req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password, currentcity } = req.body;
     bcrypt.hash(password, saltRounds)
       .then((hash) => {
-        return createUser(name, email, hash)
+        return createUser(name, email, hash, currentcity)
       })
       .then((userInfo) => {
         if (userInfo.name != 'error') {

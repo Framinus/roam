@@ -3,11 +3,11 @@ const bcrypt = require('bcrypt');
 
 const saltRounds = 10;
 
-const createUser = (name, email, password) => {
+const createUser = (name, email, password, currentcity) => {
   return db.oneOrNone(`
-    INSERT INTO users (name, email, password)
-    VALUES (lower($1::text), lower($2::text), $3)
-    RETURNING *`, [name, email, password])
+    INSERT INTO users (name, email, password, current_city)
+    VALUES ($1, $2, $3, $4)
+    RETURNING *`, [name, email, password, currentcity])
     .catch((err) => {
       return err;
     });
@@ -28,11 +28,19 @@ const validateUser = (email) => {
     });
 };
 
-const getUserProfile = (id) => {
-  return db.one(`SELECT * FROM users WHERE id=$1`, id)
+const getUserProfileAndReviews = (id) => {
+  return db.any(`
+    SELECT users.name, users.image_url, users.current_city,
+    reviews.title, reviews.content
+    FROM users
+    JOIN reviews
+    ON users.id = reviews.user_id
+    WHERE users.id=$1`, id)
     .catch((err) => {
+      console.error(err);
       return err;
-    })
+    });
 };
 
-module.exports = { createUser, deleteUser, getUserProfile, validateUser };
+
+module.exports = { createUser, deleteUser, getUserProfileAndReviews, validateUser };

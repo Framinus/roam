@@ -6,6 +6,7 @@ CREATE TABLE users (
   email VARCHAR(255) UNIQUE NOT NULL,
   password VARCHAR(255) NOT NULL,
   image_url TEXT,
+  current_city VARCHAR(255) NOT NULL,
   join_date TIMESTAMP(0) DEFAULT now()
 );
 
