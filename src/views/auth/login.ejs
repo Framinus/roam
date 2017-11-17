@@ -1,11 +1,16 @@
 <%- include ../partials/header.ejs %>
 
-<form class="login-form" action="/auth/login" method="post">
-  <input type="text" name="email" placeholder="Your Email">
-  <input type="password" name="password" placeholder="Password">
-  <button type="submit">Submit</button>
-</form>
-<p><%= alert %></p>
-
+<div class="parallax">
+  <div class="welcome">
+    <h2>Welcome Back!</h2>
+  <div class="auth-form-container">
+    <form class="auth-form" action="/auth/login" method="post">
+      <input class="auth-form-link" type="text" name="email" placeholder="Your Email">
+      <input class="auth-form-link" type="password" name="password" placeholder="Password">
+      <button class="auth-form-btn" type="submit">Submit</button>
+    </form>
+    <p><%= alert %></p>
+  </div>
+</div>
 
 <%- include ../partials/footer.ejs %>

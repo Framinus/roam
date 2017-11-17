@@ -1,6 +1,7 @@
 
 .link-text {
   color: #fff;
+  margin: 10px;
 }
 
 .link-text:hover {
@@ -9,6 +10,7 @@
 }
 
 .navbar {
+  background-color: rgb(7, 15, 28);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -47,6 +49,27 @@
   justify-content: center;
   margin-top: 1em;
   padding: 10px;
+}
+
+.auth-form-container {
+  margin-top: 150px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form-link {
+  margin: 10px;
+}
+
+.auth-form-btn {
+  background-color: rgb(31, 6, 3);
+  border: 2px groove white;
+  color: #fff;
+  margin-top: 10px;
 }
 
 .login-prompt {
