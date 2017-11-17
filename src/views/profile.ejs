@@ -8,8 +8,14 @@
     <div class="user user-name"><%= profile[0].name %></div>
     <div class="user current-city"><%= profile[0].current_city %></div>
     <div class="user edit-profile">
-      <button type="button" class="edit-profile-btn">Edit Profile</button>
+      <button type="button" id="edit-profile-btn">Edit Profile</button>
     </div>
+    <form class="edit-profile-form" action="/" method="POST">
+      <input id="edit-name-field" type="text" name="name">
+      <input class="edit-city-field" type="text" name="currentcity">
+      <input class="edit-image-field" type="text" name="imageurl">
+      <button id="profile-changes-btn" type="submit">Save Changes</button>
+    </form>
   </div>
 
   <div class="posts-column">

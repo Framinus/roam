@@ -75,7 +75,7 @@
 
 .login-prompt {
   color: #000;
-  margin-top: 70px;
+  margin-top: 140px;
 }
 
 .main-link {
@@ -153,7 +153,7 @@
   margin: 5px;
 }
 
-.edit-profile-btn {
+#edit-profile-btn {
   background-color:  rgb(29, 8, 97);
   border-radius: 5px;
   color: #fff;
