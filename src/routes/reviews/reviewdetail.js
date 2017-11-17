@@ -2,7 +2,11 @@ const router = require('express').Router();
 
 router.route('/')
   .get((req, res) => {
-    res.render('review_detail');
+    if (req.session.user) {
+      res.render('review_detail');
+    } else {
+      res.redirect('/');
+    }
   });
 
 module.exports = router;

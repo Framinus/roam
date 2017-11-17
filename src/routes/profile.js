@@ -2,13 +2,16 @@ const router = require('express').Router();
 const getUserProfile = require('../db/users.js').getUserProfile;
 
 router.get('/', (req, res) => {
-  const { user } = req.session;
-  console.log('req.session.user', req.session.user);
-  getUserProfile(user)
-    .then((profile) => {
-      res.render('profile', { profile });
-    })
-    .catch(console.error);
+  if (req.session.user) {
+    const { user } = req.session;
+    getUserProfile(user)
+      .then((profile) => {
+        res.render('profile', { profile });
+      })
+      .catch(console.error);
+  } else {
+    res.redirect('/');
+  }
 });
 
 router.post('/', (req, res) => {
