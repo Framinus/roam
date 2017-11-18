@@ -21,6 +21,7 @@ router.route('/')
       .then((comparison) => {
         if (comparison) {
           req.session.user = user;
+          res.locals.user = user;
           res.redirect('/profile');
         } else {
           res.render('auth/login', { alert: 'Incorrect email or password' });
