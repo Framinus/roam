@@ -30,7 +30,7 @@ const validateUser = (email) => {
 
 const getUserProfileAndReviews = (id) => {
   return db.any(`
-    SELECT users.name, users.image_url, users.current_city,
+    SELECT users.id, users.name, users.image_url, users.current_city,
     reviews.title, reviews.content
     FROM users
     JOIN reviews

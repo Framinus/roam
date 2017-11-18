@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("js is working!");
   /* global $ */
 
+  $('.hiddenID').hide();
   $('.edit-profile-form').hide();
 
   const editProfileBtn = document.getElementById('edit-profile-btn');
@@ -16,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   saveProfileBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    const id = document.querySelector('.hiddenID').text;
+    console.log("id from frontend", id);
     const name = document.querySelector('#edit-name-field').value;
     const currentcity = document.querySelector('.edit-city-field').value;
     const imageUrl = document.querySelector('.edit-image-field').value;
@@ -25,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'Accept': 'application/json, text/plain',
         'Content-type': 'application/json',
       },
-      body: JSON.stringify({ name, currentcity, imageUrl }),
+      body: JSON.stringify({ id, name, currentcity, imageUrl }),
     })
       .then((response) => {
         $('.edit-profile-form').hide();
