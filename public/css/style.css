@@ -159,6 +159,23 @@
   color: #fff;
 }
 
+.edit-profile-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.edit {
+  margin: 10px;
+}
+
+.edit-profile-header {
+  margin-top: 20px;
+  text-align: center;
+}
+
 /*city pages */
 
 .city-image {

@@ -24,6 +24,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: { maxAge: 6000000 },
 }));
+
 app.use('/', routes);
 
 const port = process.env.PORT || 3000;

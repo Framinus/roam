@@ -9,6 +9,7 @@ const oakland = require('./cities/oakland');
 const newpost = require('./reviews/newreview');
 const reviewdetail = require('./reviews/reviewdetail');
 const newreview = require('./reviews/newreview');
+const editprofile = require('./profile/editprofile');
 
 router.get('/', (req, res) => {
   res.render('home/index');
@@ -30,6 +31,7 @@ router.use('/cities/oakland', oakland);
 router.use('/reviews/newpost', newpost);
 router.use('/reviews/reviewdetail', reviewdetail);
 router.use('/reviews/newreview', newreview);
+router.use('/profile/editprofile', editprofile);
 
 
 module.exports = router;
