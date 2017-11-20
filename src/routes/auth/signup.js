@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const createUser = require('../../db/users.js').createUser;
-const bcrypt = require('bcrypt');
+const saltPassword = require('../../db/users.js').saltPassword;
 
 const saltRounds = 10;
 
@@ -11,7 +11,7 @@ router.route('/')
 
   .post((req, res) => {
     const { name, email, password, currentcity } = req.body;
-    bcrypt.hash(password, saltRounds)
+    saltPassword(password, saltRounds)
       .then((hash) => {
         return createUser(name, email, hash, currentcity)
       })

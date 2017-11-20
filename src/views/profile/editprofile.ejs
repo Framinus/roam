@@ -1,0 +1,17 @@
+<%-include ../partials/header.ejs %>
+
+<%-include ../partials/nav.ejs %>
+
+<div class="main-edit-container">
+  <h2 class="edit-profile-header">Edit Profile</h2>
+  <div class="edit-profile-container">
+    <form class="edit-profile-form" action="/" method="POST">
+      <input id="edit-name-field" class="edit" type="text" name="name" placeholder="Name">
+      <input class="edit edit-city-field" type="text" name="currentcity" placeholder="Current City">
+      <input class="edit edit-image-field" type="text" name="imageurl" placeholder="Image Url">
+      <button id="profile-changes-btn" class="edit" type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<%-include ../partials/footer.ejs %>
