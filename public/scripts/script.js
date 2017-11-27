@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       $('.edit-profile-form').show();
     });
     const editBook = function (event) {
-      console.log('save button is being clicked');
       event.preventDefault();
       const id = $('.profile-changes-btn').attr('data-id');
       const name = document.querySelector('#edit-name-field').value;
