@@ -6,7 +6,7 @@ router.route('/')
     if (req.session.user) {
       return getReviewsForCity(2)
         .then((reviews) => {
-          res.render('cities/new_york', { reviews });
+          res.render('cities/2', { reviews });
         })
         .catch((err) => {
           console.error(err);
