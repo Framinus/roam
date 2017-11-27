@@ -1,9 +1,9 @@
 const db = require('./db.js');
 
-const createReview = (user_id, city_id, title, content) => {
+const createReview = (userId, cityId, title, content) => {
   return db.one(`INSERT INTO reviews (user_id, city_id, title, content)
-  VALUES ($1::int, $2::int, $3::text, $4::text) RETURNING *`,
-    [user_id, city_id, title, content])
+  VALUES ($1, $2, $3, $4) RETURNING *`,
+    [userId, cityId, title, content])
     .catch((err) => {
       console.error(err, 'failed to create review');
     });
