@@ -4,14 +4,16 @@
 
 <div class="profile-container">
   <div class="profile-column">
-    <div class="hiddenID"><%= profile[0].id %></div>
     <img class="user user-pic" src="<%= profile[0].image_url %>">
     <div class="user user-name"><%= profile[0].name %></div>
     <div class="user current-city"><%= profile[0].current_city %></div>
     <div class="user edit-profile">
-      <a href="/profile/editprofile">
-        <button type="submit" id="edit-profile-btn">Edit Profile</button>
-      </a>
+      <form class="edit-profile-form">
+        <input type="text" name="name" id="edit-name-field" placeholder="<%= profile[0].name %>">
+        <input type="text" name="currentcity" class="edit-city-field" placeholder="<%= profile[0].current_city %>">
+        <button type="submit" class="profile-changes-btn" data-id="<%= profile[0].id %>">Save Changes</button>
+      </form>
+      <button type="submit" id="edit-profile-btn">Edit Profile</button>
     </div>
   </div>
 

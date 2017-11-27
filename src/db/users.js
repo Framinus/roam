@@ -45,13 +45,13 @@ const getUserProfileAndReviews = (id) => {
     });
 };
 
-const editUserProfile = (id, name, currentcity, imageUrl) => {
+const editUserProfile = (id, name, currentcity) => {
   return db.one(`
     UPDATE users
-    SET name=$2, current_city=$3, image_url=$4
+    SET name=$2, current_city=$3
     WHERE id=$1
     RETURNING *
-    `, [id, name, currentcity, imageUrl]);
+    `, [id, name, currentcity]);
 };
 
 
