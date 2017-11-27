@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const getReviewsForCity = require('../../db/cities.js').getReviewsForCity;
+const getReviewsForCity = require('../../db/cities').getReviewsForCity;
 
 router.route('/')
   .get((req, res) => {
     if (req.session.user) {
-      return getReviewsForCity(1)
+      return getReviewsForCity(3)
         .then((reviews) => {
-          res.render('cities/hong_kong', { reviews });
+          res.render('cities/3', { reviews });
         })
         .catch((err) => {
           console.error(err);

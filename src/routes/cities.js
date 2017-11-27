@@ -9,5 +9,9 @@ router.route('/')
     }
   });
 
+router.get('/cities/:city', (req, res) => {
+  const city = req.params.city;
+  res.render(`cities/${city}`);
+});
 
 module.exports = router;
