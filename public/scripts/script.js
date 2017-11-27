@@ -39,4 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     $(document).on('click', '.profile-changes-btn', editBook);
   }
+
+  // jquery for the posts page
+  if (top.location.pathname === '/reviews') {
+    const submitNewReviewBtn = document.querySelector('.new-review-submit-btn');
+    submitNewReviewBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('this button is being clicked');
+    });
+  }
 });

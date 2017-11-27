@@ -2,8 +2,6 @@ const router = require('express').Router();
 const editUserProfile = require('../../db/users.js').editUserProfile;
 
 router.get('/', (req, res) => {
-  const user = req.session.user;
-  console.log('user in edit profile route', user);
   res.render('profile/editprofile');
 });
 
