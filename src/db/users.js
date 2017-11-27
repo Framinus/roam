@@ -38,7 +38,8 @@ const getUserProfileAndReviews = (id) => {
     FROM users
     JOIN reviews
     ON users.id = reviews.user_id
-    WHERE users.id=$1`, id)
+    WHERE users.id=$1
+    ORDER BY reviews.id DESC`, id)
     .catch((err) => {
       console.error(err);
       return err;
