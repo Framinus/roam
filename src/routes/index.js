@@ -29,7 +29,6 @@ router.use('/cities/2', newyork);
 router.use('/cities/3', oakland);
 router.use('/reviews/newreview', newreview);
 router.use('/reviews/reviewdetail', reviewdetail);
-router.use('/reviews/newreview', newreview);
 router.use('/profile/editprofile', editprofile);
 
 
