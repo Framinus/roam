@@ -13,11 +13,12 @@ const getCityAndReviews = (cityId) => {
 
 const getReviewsForCity = (cityID) => {
   return db.any(`
-    SELECT users.name, users.image_url, reviews.title, reviews.content
+    SELECT users.name, users.image_url, reviews.id, reviews.title, reviews.content
     FROM users
     JOIN reviews
     ON users.id = reviews.user_id
     WHERE reviews.city_id = $1
+    ORDER BY reviews.id DESC
     `, cityID);
 };
 
