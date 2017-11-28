@@ -221,6 +221,24 @@
   color: #fff;
 }
 
+.edit-review-submit-btn {
+  background-color:  rgb(29, 8, 97);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.edit-post-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.edit-post-header {
+  margin: 20px;
+  text-align: center;
+}
+
 /*city pages */
 
 .city-image {

@@ -34,6 +34,7 @@ const deleteUser = (id) => {
 const getUserProfileAndReviews = (id) => {
   return db.any(`
     SELECT users.id, users.name, users.image_url, users.current_city,
+    reviews.id AS reviewid,
     reviews.title, reviews.content
     FROM users
     JOIN reviews

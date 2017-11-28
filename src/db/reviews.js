@@ -17,12 +17,21 @@ const deleteReview = (id) => {
 };
 
 const editReview = (id, title, content) => {
-  return db.one(`INSERT INTO reviews (title, content) VALUES ($2::text, $3::text)
-  WHERE id=$1::int`,
+  return db.one(`UPDATE reviews
+  SET title=$2, content=$3
+  WHERE id=$1
+  RETURNING *`,
     [id, title, content])
     .catch((err) => {
       console.error(err, 'Failed to edit review');
     });
 };
 
-module.exports = { createReview, deleteReview, editReview };
+const getReviewById = (id) => {
+  return db.one(`SELECT * FROM reviews WHERE id=$1`, id)
+    .catch((err) => {
+      console.error(err, 'Failed to get review');
+    });
+};
+
+module.exports = { createReview, deleteReview, editReview, getReviewById };
