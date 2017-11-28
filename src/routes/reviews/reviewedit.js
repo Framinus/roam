@@ -8,11 +8,11 @@ router.get('/:id', (req, res) => {
     return getReviewById(postId.id)
       .then((review) => {
         console.log("review object being passed in", review)
-        res.render('reviews/review_detail', { review });
+        res.render('reviews/review_edit', { review });
       })
       .catch(console.error);
   } else {
-    res.redirect('/');
+    res.redirect('/auth/login');
   }
 });
 
