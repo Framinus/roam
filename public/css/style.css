@@ -239,6 +239,41 @@
   text-align: center;
 }
 
+.review-full-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 30px;
+}
+
+.review-full-title {
+  margin: 20px;
+}
+
+.review-full-content {
+  margin: 10px 200px;
+}
+
+.review-full-buttons {
+  margin: 40px 10px;
+}
+
+.full-btn {
+  border-radius: 5px;
+  color: #fff;
+  margin: 10px;
+}
+
+.edit-review-btn {
+  background-color:  rgb(29, 8, 97);
+
+}
+
+.delete-review-btn {
+  background-color:  #D21E66;
+}
+
 /*city pages */
 
 .city-image {

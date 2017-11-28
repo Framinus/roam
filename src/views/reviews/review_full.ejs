@@ -1,0 +1,16 @@
+<%-include ../partials/header.ejs %>
+
+<%-include ../partials/nav.ejs %>
+
+<div class="review-full-container">
+  <h4 class="review-full-title">
+    <%= review.title %>
+  </h4>
+  <div class="review-full-content">
+    <%= review.content %>
+  </div>
+  <div class="review-full-buttons">
+    <a href="/reviews/reviewedit/<%= review.id %>"><button class="full-btn edit-review-btn">Edit Post</button></a>
+    <a href="/reviews/reviewdelete/<%= review.id %>"><button class="full-btn delete-review-btn">Delete Post</button></a>
+  </div>
+</div>
