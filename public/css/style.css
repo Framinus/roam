@@ -1,5 +1,12 @@
 /*main and auth pages */
 
+.logo {
+  color: #fff;
+  display: inline;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
 .link-text {
   color: #fff;
   margin: 10px;
