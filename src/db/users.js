@@ -1,11 +1,11 @@
 const db = require('./db.js');
 const bcrypt = require('bcrypt');
 
-const createUser = (name, email, password, currentcity) => {
+const createUser = (name, email, password, imageurl, currentcity) => {
   return db.oneOrNone(`
-    INSERT INTO users (name, email, password, current_city)
-    VALUES ($1, $2, $3, $4)
-    RETURNING *`, [name, email, password, currentcity])
+    INSERT INTO users (name, email, password, image_url, current_city)
+    VALUES ($1, $2, $3, $4, $5)
+    RETURNING *`, [name, email, password, imageurl, currentcity])
     .catch((err) => {
       return err;
     });
@@ -28,6 +28,21 @@ const deleteUser = (id) => {
     .catch((err) => {
       return err;
     });
+};
+
+const getUserProfile = (id) => {
+  return db.one(`
+    SELECT * FROM users
+    WHERE users.id = $1`, id)
+    .catch(console.error);
+};
+
+const getUserReviews = (id) => {
+  return db.any(`
+    SELECT * FROM reviews
+    WHERE user_id=$1
+    `, id)
+    .catch(console.error);
 };
 
 
@@ -57,4 +72,4 @@ const editUserProfile = (id, name, currentcity) => {
 };
 
 
-module.exports = { createUser, deleteUser, editUserProfile, getUserProfileAndReviews, saltPassword, validateUser };
+module.exports = { createUser, deleteUser, editUserProfile, getUserProfile, getUserReviews, getUserProfileAndReviews, saltPassword, validateUser };
