@@ -10,7 +10,8 @@ const createReview = (userId, cityId, title, content) => {
 };
 
 const deleteReview = (id) => {
-  return db.none(`DELETE FROM reviews WHERE id=$1::int`, id)
+  return db.one(`DELETE FROM reviews WHERE id=$1::int
+    RETURNING *`, id)
     .catch((err) => {
       console.error(err, 'Error deleting review from db');
     });

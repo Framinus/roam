@@ -11,6 +11,8 @@
   </div>
   <div class="review-full-buttons">
     <a href="/reviews/reviewedit/<%= review.id %>"><button class="full-btn edit-review-btn">Edit Post</button></a>
-    <a href="/reviews/reviewdelete/<%= review.id %>"><button class="full-btn delete-review-btn">Delete Post</button></a>
+    <form class="delete-post-form" action="/reviews/reviewfull/<%= review.id %>" method="POST">
+      <button type="submit" class="full-btn delete-review-btn" data-id="<%= review.id %>">Delete Post</button>
+    </form>
   </div>
 </div>

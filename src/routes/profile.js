@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   const { id, name, currentcity } = req.body;
   return editUserProfile(id, name, currentcity)
-    .then(response => res.json())
+    .then(result => result.json())
     .then(profile => profile)
     .catch(console.error);
 });

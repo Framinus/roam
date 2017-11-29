@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       $('.current-city').hide();
       $('.edit-profile-form').show();
     });
-    const editBook = function (event) {
+    const editProfile = function (event) {
       event.preventDefault();
       const id = $('.profile-changes-btn').attr('data-id');
       const name = document.querySelector('#edit-name-field').value;
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ id, name, currentcity }),
       })
         .then((profile) => {
-          console.log(profile);
           if (profile) {
             $('.edit-profile-form').hide();
             $('.user-name').replaceWith(`<div class="user user-name">${name}</div>`);
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(console.error);
     };
-    $(document).on('click', '.profile-changes-btn', editBook);
+    $(document).on('click', '.profile-changes-btn', editProfile);
   }
 
   // jquery for the posts page
@@ -48,4 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log('this button is being clicked');
     });
   }
+
+  // jquery for deleting reviews from full post page
+  const deleteConfirmation = () => {
+    if (confirm("Are you sure you want to delete this review?")) {
+      document.forms[0].submit();
+    } else {
+      return false;
+    }
+  };
+
+  $(document).on('click', '.delete-review-btn', deleteConfirmation);
 });
