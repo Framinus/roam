@@ -1,10 +1,20 @@
 const router = require('express').Router();
 const createReview = require('../../db/reviews.js').createReview;
+const getCityName = require('../../db/cities.js').getCityName;
 
-router.get('/', (req, res) => {
+router.get('/:city', (req, res) => {
   const userId = req.session.user;
+  const city = req.params;
   if (req.session.user) {
-    res.render('reviews/new_review', { userId });
+    return getCityName(city.city)
+      .then((cityName) => {
+        res.render('reviews/new_review',
+          {
+            userId,
+            cityName,
+          });
+      })
+      .catch(console.error);
   } else {
     res.redirect('/');
   }
