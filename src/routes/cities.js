@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
 router.get('/:city', (req, res) => {
   if (req.session.user) {
     const city = req.params.city;
-    console.log(city);
     return getReviewsForCity(city)
       .then((reviews) => {
         res.render(`cities/${city}`, { reviews });
