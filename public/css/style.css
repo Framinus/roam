@@ -274,7 +274,16 @@
 
 .edit-review-btn {
   background-color:  rgb(29, 8, 97);
+}
 
+.go-back-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cancel-review-edit {
+  background-color:  #D21E66;
 }
 
 .delete-review-btn {

@@ -22,12 +22,8 @@
     <% reviews.forEach((review) => { %>
       <div class="posts-row">
         <div class="post-body">
-          <div class="post-title"><a href="/reviews/reviewfull/<%= review.reviewid %>"><%= review.title %></a></div>
+          <div class="post-title"><a href="/reviews/reviewfull/<%= review.id %>"><%= review.title %></a></div>
           <div class="post-content"><%= review.content %></div>
-        </div>
-        <div class="icon-column">
-          <a href="/reviews/reviewedit/<%= review.reviewid %>"><i class="profile-icon fa fa-pencil" aria-hidden="true"></i></a>
-          <i class="profile-icon fa fa-trash" aria-hidden="true"></i>
         </div>
       </div>
       <% }) %>
