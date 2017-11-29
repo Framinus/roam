@@ -1,5 +1,9 @@
 const db = require('./db.js');
 
+const getCityName = (cityId) => {
+  return db.one(`SELECT * FROM cities
+    WHERE id=$1`, cityId);
+};
 
 const getCityAndReviews = (cityId) => {
   return db.any(`
@@ -23,4 +27,4 @@ const getReviewsForCity = (cityID) => {
 };
 
 
-module.exports = { getReviewsForCity, getCityAndReviews };
+module.exports = { getCityName, getReviewsForCity, getCityAndReviews };

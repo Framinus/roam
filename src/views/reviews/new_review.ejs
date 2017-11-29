@@ -3,16 +3,14 @@
 
 <div class="review-prompt">
   <h3 class="new-review-prompt">Share your Knowledge</h3>
-  <p class="review-prompt-paragraph">How did you spend your time in this city? What would you have wanted to know before you arrived? Any places to avoid? Make Roam travellers the saviest folks around!</p>
+  <div>
+    <p>Write a review for <%= cityName.name %>! </p>
+  </div>
+  <p class="review-prompt-paragraph">How did you spend your time here? What would you have wanted to know before you arrived? Any places to avoid? Make Roam travellers the saviest folks around!</p>
 </div>
 <div class="review-form-container">
   <form class="new-review-form" action="/reviews/newreview" method="POST">
-    <label>Pick a city</label>
-    <select class="review" name="cityId">
-      <option value="1">Hong Kong</option>
-      <option value="2">New York</option>
-      <option value="3">Oakland</option>
-    </select>
+    <input type="hidden" name="cityId" value="<%= cityName.id %>">
     <label>Enter a snappy title</label>
     <input class="review review-title" type="text" name="title" required placeholder="title">
     <label>Speak your mind!</label>
