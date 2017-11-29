@@ -9,7 +9,17 @@
   <form class="edit-post-form" action="/reviews/reviewdetail/:id" method="POST">
     <input type="hidden" name="id" value="<%= review.id %>">
     <input class="review review-title" type="text" name="title" required placeholder="<%= review.title %>">
-    <textarea class="review review-content" type="text" name="content" required placeholder="<%= review.content %>"></textarea>
-    <button class="edit-review-submit-btn" type="submit" >Are you sure?</button>
+    <textarea class="review review-content" type="text" name="content" required placeholder="<%= review.content %>">
+    </textarea>
+    <button class="edit-review-submit-btn" type="submit">
+      Are you sure?
+    </button>
   </form>
+  <div class="go-back-container">
+    <a href="/profile">
+      <button class="full-btn cancel-review-edit">
+        Go Back!
+      </button>
+    </a>
+  </div>
 </div>
