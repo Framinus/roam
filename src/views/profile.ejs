@@ -4,21 +4,22 @@
 
 <div class="profile-container">
   <div class="profile-column">
-    <img class="user user-pic" src="<%= profile[0].image_url %>">
-    <div class="user user-name"><%= profile[0].name %></div>
-    <div class="user current-city"><%= profile[0].current_city %></div>
+    <img class="user user-pic" src="<%= user.image_url %>">
+    <div class="user user-name"><%= user.name %></div>
+    <div class="user current-city"><%= user.current_city %></div>
     <div class="user edit-profile">
       <form class="edit-profile-form">
-        <input type="text" name="name" id="edit-name-field" placeholder="<%= profile[0].name %>">
-        <input type="text" name="currentcity" class="edit-city-field" placeholder="<%= profile[0].current_city %>">
-        <button type="submit" class="profile-changes-btn" data-id="<%= profile[0].id %>">Save Changes</button>
+        <input type="text" name="name" id="edit-name-field" placeholder="<%= user.name %>">
+        <input type="text" name="currentcity" class="edit-city-field" placeholder="<%= user.current_city %>">
+        <button type="submit" class="profile-changes-btn" data-id="<%= user.id %>">Save Changes</button>
       </form>
       <button type="submit" id="edit-profile-btn">Edit Profile</button>
     </div>
   </div>
 
   <div class="posts-column">
-    <% profile.forEach((review) => { %>
+    <% if (reviews) { %>
+    <% reviews.forEach((review) => { %>
       <div class="posts-row">
         <div class="post-body">
           <div class="post-title"><a href="/reviews/reviewfull/<%= review.reviewid %>"><%= review.title %></a></div>
@@ -30,6 +31,14 @@
         </div>
       </div>
       <% }) %>
+      <% } else { %>
+          <div class="posts-row">
+            <div class="post-body">
+              <div class="post-title"><%= noreviews.title %></div>
+              <div class="post-row"><%= noreviews.content %></div>
+            </div>
+          </div>
+        <% } %>
   </div>
 </div>
 

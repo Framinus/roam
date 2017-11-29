@@ -11,9 +11,10 @@ router.route('/')
 
   .post((req, res) => {
     const { name, email, password, currentcity } = req.body;
+    const imageurl = 'https://vignette.wikia.nocookie.net/jamesbond/images/6/61/Generic_Placeholder_-_Profile.jpg/revision/latest?cb=20121227201208';
     saltPassword(password, saltRounds)
       .then((hash) => {
-        return createUser(name, email, hash, currentcity)
+        return createUser(name, email, hash, imageurl, currentcity)
       })
       .then((userInfo) => {
         if (userInfo.name != 'error') {

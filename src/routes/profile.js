@@ -1,19 +1,52 @@
 const router = require('express').Router();
-const getUserProfileAndReviews = require('../db/users.js').getUserProfileAndReviews;
+const getUserReviews = require('../db/users.js').getUserReviews;
+const getUserProfile = require('../db/users.js').getUserProfile;
 const editUserProfile = require('../db/users.js').editUserProfile;
 
-router.get('/', (req, res) => {
+const findUser = (req, res, next) => {
   if (req.session.user) {
     const { user } = req.session;
-    getUserProfileAndReviews(user)
+    return getUserProfile(user)
       .then((profile) => {
-        res.render('profile', { profile });
+        req.userProfile = profile;
+        next();
       })
       .catch(console.error);
   } else {
-    res.redirect('/');
+    res.redirect('/auth/login');
   }
-});
+};
+
+const findReviews = (req, res, next) => {
+  const { user } = req.session;
+  return getUserReviews(user)
+    .then((reviews) => {
+      if (reviews[0] === undefined) {
+        req.noReviews = {
+          title: 'No reviews yet...',
+          content: 'Go to a city page to begin!',
+        };
+        next();
+      } else {
+        req.userReviews = reviews;
+        next();
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      next();
+    });
+};
+
+const renderProfilePage = (req, res) => {
+  res.render('profile', {
+    user: req.userProfile,
+    reviews: req.userReviews,
+    noreviews: req.noReviews,
+  });
+};
+
+router.get('/', findUser, findReviews, renderProfilePage);
 
 router.post('/', (req, res) => {
   const { id, name, currentcity } = req.body;
