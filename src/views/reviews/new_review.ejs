@@ -12,9 +12,11 @@
   <form class="new-review-form" action="/reviews/newreview" method="POST">
     <input type="hidden" name="cityId" value="<%= cityName.id %>">
     <label>Enter a snappy title</label>
-    <input class="review review-title" type="text" name="title" required placeholder="title">
+    <input class="review review-title" type="text" name="title" required>
     <label>Speak your mind!</label>
-    <input class="review review-content" type="text" name="content" required placeholder="Type your review here.">
+    <textarea class="review review-content" type="text" name="content" required>
+
+    </textarea>
     <input type="hidden" name="userId" value="<%= userId %>">
     <button class="new-review-submit-btn" type="submit" action="/" method="POST">Post Your Review!</button>
   </form>
