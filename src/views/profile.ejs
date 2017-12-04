@@ -7,6 +7,7 @@
     <img class="user user-pic" src="<%= user.image_url %>">
     <div class="user user-name"><%= user.name %></div>
     <div class="user current-city"><%= user.current_city %></div>
+    <div class="user join-date">Joined on: <%= user.join_date %></div>
     <div class="user edit-profile">
       <form class="edit-profile-form">
         <input type="text" name="name" id="edit-name-field" value="<%= user.name %>">
