@@ -6,10 +6,11 @@
   <h3>Forgot a detail? Missed a typo?</h3>
 </div>
 <div class="edit-post-container">
-  <form class="edit-post-form" action="/reviews/reviewdetail/:id" method="POST">
+  <form class="edit-post-form" action="/reviews/reviewedit/:id" method="POST">
     <input type="hidden" name="id" value="<%= review.id %>">
     <input class="review review-title" type="text" name="title" required placeholder="<%= review.title %>">
-    <textarea class="review review-content" type="text" name="content" required placeholder="<%= review.content %>">
+    <textarea class="review review-content" type="text" name="content">
+      <%= review.content %>
     </textarea>
     <button class="edit-review-submit-btn" type="submit">
       Are you sure?
