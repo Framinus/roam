@@ -9,9 +9,9 @@
     <div class="user current-city"><%= user.current_city %></div>
     <div class="user edit-profile">
       <form class="edit-profile-form">
-        <input type="text" name="name" id="edit-name-field" placeholder="<%= user.name %>">
-        <input type="text" name="currentcity" class="edit-city-field" placeholder="<%= user.current_city %>">
-        <button type="submit" class="profile-changes-btn" data-id="<%= user.id %>">Save Changes</button>
+        <input type="text" name="name" id="edit-name-field" value="<%= user.name %>">
+        <input type="text" name="currentcity" class="edit-city-field" value="<%= user.current_city %>">
+        <button type="submit" class="profile-changes-btn full-btn" data-id="<%= user.id %>">Save Changes</button>
       </form>
       <button type="submit" id="edit-profile-btn">Edit Profile</button>
     </div>

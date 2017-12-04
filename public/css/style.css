@@ -194,6 +194,10 @@
   text-align: center;
 }
 
+.post-title a {
+  color: rgb(29, 8, 97);
+}
+
 /*review pages */
 
 .review-prompt {
@@ -272,7 +276,11 @@
   margin: 10px;
 }
 
-.edit-review-btn {
+#edit-review-btn {
+  background-color:  rgb(29, 8, 97);
+}
+
+.profile-changes-btn {
   background-color:  rgb(29, 8, 97);
 }
 
