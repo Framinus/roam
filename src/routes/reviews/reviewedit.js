@@ -3,16 +3,16 @@ const getReviewById = require('../../db/reviews.js').getReviewById;
 const editReview = require('../../db/reviews.js').editReview;
 
 router.get('/:id', (req, res) => {
-  if (req.session.user) {
-    const postId = req.params;
-    return getReviewById(postId.id)
-      .then((review) => {
+  const postId = req.params;
+  return getReviewById(postId.id)
+    .then((review) => {
+      if (req.session.user !== review.user_id) {
+        res.redirect('../../error_rendering/forbidden');
+      } else {
         res.render('reviews/review_edit', { review });
-      })
-      .catch(console.error);
-  } else {
-    res.redirect('/auth/login');
-  }
+      }
+    })
+    .catch(console.error);
 });
 
 router.post('/:id', (req, res) => {
