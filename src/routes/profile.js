@@ -2,13 +2,22 @@ const router = require('express').Router();
 const getUserReviews = require('../db/users.js').getUserReviews;
 const getUserProfile = require('../db/users.js').getUserProfile;
 const editUserProfile = require('../db/users.js').editUserProfile;
+const moment = require('moment');
 
 const findUser = (req, res, next) => {
   if (req.session.user) {
     const { user } = req.session;
     return getUserProfile(user)
       .then((profile) => {
-        req.userProfile = profile;
+        const formattedDate = moment(profile.join_date).format('MM-DD-YYYY');
+        const formattedProfile = {
+          id: profile.id,
+          name: profile.name,
+          current_city: profile.current_city,
+          image_url: profile.image_url,
+          join_date: formattedDate,
+        };
+        req.userProfile = formattedProfile;
         next();
       })
       .catch(console.error);
