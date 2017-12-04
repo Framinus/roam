@@ -2,19 +2,25 @@
 
 <%-include ../partials/nav.ejs %>
 
-<div class="review-full-container">
-  <h4 class="review-full-title">
-    <%= review.title %>
-  </h4>
-  <div class="review-full-content">
-    <%= review.content %>
+<div class="posts">
+  <div class="post-mini-profile">
+    <img class="mini-image" height="100" width="100" src= '<%= review.image_url %>' >
+    <p class="mini-username"><%= review.name %></p>
   </div>
-  <% if (userMatches) { %>
-  <div class="review-full-buttons">
-    <a href="/reviews/reviewedit/<%= review.id %>"><button class="full-btn edit-review-btn">Edit Post</button></a>
-    <form class="delete-post-form" action="/reviews/reviewfull/<%= review.id %>" method="POST">
-      <button type="submit" class="full-btn delete-review-btn" data-id="<%= review.id %>">Delete Post</button>
-    </form>
+  <div class="review-full-container">
+    <h4 class="review-full-title">
+      <%= review.title %>
+    </h4>
+    <div class="review-full-content">
+      <%= review.content %>
+    </div>
+    <% if (userMatches) { %>
+    <div class="review-full-buttons">
+      <a href="/reviews/reviewedit/<%= review.id %>"><button class="full-btn edit-review-btn">Edit Post</button></a>
+      <form class="delete-post-form" action="/reviews/reviewfull/<%= review.id %>" method="POST">
+        <button type="submit" class="full-btn delete-review-btn" data-id="<%= review.id %>">Delete Post</button>
+      </form>
+    </div>
+    <% } %>
   </div>
-  <% } %>
 </div>

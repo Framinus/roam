@@ -328,11 +328,12 @@
 }
 
 .new-review-link {
+  border-bottom: 1px solid grey;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .posts {
-  border-top: 1px solid grey;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
