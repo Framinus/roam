@@ -41,6 +41,7 @@ const getUserReviews = (id) => {
   return db.any(`
     SELECT * FROM reviews
     WHERE user_id=$1
+    ORDER BY id DESC
     `, id)
     .catch(console.error);
 };
