@@ -8,7 +8,7 @@
 <div class="edit-post-container">
   <form class="edit-post-form" action="/reviews/reviewedit/:id" method="POST">
     <input type="hidden" name="id" value="<%= review.id %>">
-    <input class="review review-title" type="text" name="title" required placeholder="<%= review.title %>">
+    <input class="review review-title" type="text" name="title" value="<%= review.title %>" required>
     <textarea class="review review-content" type="text" name="content">
       <%= review.content %>
     </textarea>
