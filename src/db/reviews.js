@@ -35,4 +35,13 @@ const getReviewById = (id) => {
     });
 };
 
-module.exports = { createReview, deleteReview, editReview, getReviewById };
+const getReviewAndUser = (reviewId) => {
+  return db.one(`SELECT users.name, users.image_url, reviews.id, reviews.user_id, reviews.title, reviews.content
+      FROM reviews
+      JOIN users
+      ON reviews.user_id = users.id
+      WHERE reviews.id=$1
+      `, reviewId);
+};
+
+module.exports = { createReview, deleteReview, editReview, getReviewAndUser, getReviewById };

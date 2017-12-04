@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const getReviewById = require('../../db/reviews.js').getReviewById;
+const getReviewAndUser = require('../../db/reviews.js').getReviewAndUser;
 const deleteReview = require('../../db/reviews.js').deleteReview;
 
 router.get('/:id', (req, res) => {
   if (req.session.user) {
     const postId = req.params;
     let userMatches = false;
-    return getReviewById(postId.id)
+    return getReviewAndUser(postId.id)
       .then((review) => {
         if (req.session.user === review.user_id) {
           userMatches = true;
