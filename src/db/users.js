@@ -1,11 +1,11 @@
 const db = require('./db.js');
 const bcrypt = require('bcrypt');
 
-const createUser = (name, email, password, imageurl, currentcity) => {
+const createUser = (name, email, password, imageurl, currentcity, date) => {
   return db.oneOrNone(`
-    INSERT INTO users (name, email, password, image_url, current_city)
-    VALUES ($1, $2, $3, $4, $5)
-    RETURNING *`, [name, email, password, imageurl, currentcity])
+    INSERT INTO users (name, email, password, image_url, current_city, join_date)
+    VALUES ($1, $2, $3, $4, $5, $6)
+    RETURNING *`, [name, email, password, imageurl, currentcity, date])
     .catch((err) => {
       return err;
     });

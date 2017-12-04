@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             $('.user-name').show();
             $('.current-city').replaceWith(`<div class="user current-city">${currentcity}</div>`);
             $('.current-city').show();
+            $('#edit-profile-btn').show();
           }
         })
         .catch(console.error);

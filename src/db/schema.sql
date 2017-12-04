@@ -7,7 +7,7 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   image_url TEXT,
   current_city VARCHAR(255) NOT NULL,
-  join_date TIMESTAMP(0) DEFAULT now()
+  join_date DATE
 );
 
 DROP TABLE IF EXISTS cities;

@@ -16,3 +16,6 @@ VALUES (2, 3, 'Cat Cafes and Board Games!!!', 'After running in the Oakland Mara
 
 INSERT INTO reviews(user_id, city_id, title, content)
 VALUES (3, 1, 'I never want to leave!', 'I came for a vacation. Then I met the love of my life. We watched the lights reflect off of the water and I knew that I would never return to Dullville again.');
+
+INSERT INTO reviews(user_id, city_id, title, content)
+VALUES (4, 1, 'Snack-a-licious Culture Center!', 'New York is a wonderful place to visit IF you enjoy eating and learning! From the amazing museums, galleries, schools and workshops to the restaurant replete streets of Manhattan - you will find everything you needed and wanted to fill your mind and body.');
