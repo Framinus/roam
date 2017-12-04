@@ -5,9 +5,15 @@ const deleteReview = require('../../db/reviews.js').deleteReview;
 router.get('/:id', (req, res) => {
   if (req.session.user) {
     const postId = req.params;
+    let userMatches = false;
     return getReviewById(postId.id)
       .then((review) => {
-        res.render('reviews/review_full', { review });
+        if (req.session.user === review.user_id) {
+          userMatches = true;
+        } else {
+          userMatches = false;
+        }
+        res.render('reviews/review_full', { review, userMatches });
       })
       .catch(console.error);
   } else {

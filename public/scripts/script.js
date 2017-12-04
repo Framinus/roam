@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     editProfileBtn.addEventListener('click', (e) => {
       $('.user-name').hide();
       $('.current-city').hide();
-      $('#edit-profile-btn').hide();
+      $('.edit-profile-btn').hide();
       $('.edit-profile-form').show();
     });
     const editProfile = function (event) {
