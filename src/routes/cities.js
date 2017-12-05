@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   if (req.session.user) {
     res.render('cities/city_intro');
   } else {
-    res.redirect('/auth/login');
+    res.redirect('/');
   }
 });
 
@@ -21,7 +21,7 @@ router.get('/:city', (req, res) => {
         console.error(err);
       });
   } else {
-    res.redirect('/auth/login');
+    res.redirect('/');
   }
 });
 
