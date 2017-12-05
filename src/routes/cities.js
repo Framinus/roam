@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const getReviewsForCity = require('../db/cities.js').getReviewsForCity;
 
-
 router.get('/', (req, res) => {
   if (req.session.user) {
     res.render('cities/city_intro');
@@ -17,9 +16,7 @@ router.get('/:city', (req, res) => {
       .then((reviews) => {
         res.render(`cities/${city}`, { reviews });
       })
-      .catch((err) => {
-        console.error(err);
-      });
+      .catch(console.error);
   } else {
     res.redirect('/');
   }

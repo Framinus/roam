@@ -1,9 +1,10 @@
 const router = require('express').Router();
+const moment = require('moment');
 const getUserReviews = require('../db/users.js').getUserReviews;
 const getUserProfile = require('../db/users.js').getUserProfile;
 const editUserProfile = require('../db/users.js').editUserProfile;
-const moment = require('moment');
 
+// this function calls the user info from the database and formats it.
 const findUser = (req, res, next) => {
   if (req.session.user) {
     const { user } = req.session;
@@ -26,6 +27,7 @@ const findUser = (req, res, next) => {
   }
 };
 
+// this function finds all of the reviews for the logged in user.
 const findReviews = (req, res, next) => {
   const { user } = req.session;
   return getUserReviews(user)
@@ -47,6 +49,7 @@ const findReviews = (req, res, next) => {
     });
 };
 
+// this function renders the profile page with info from the prior two functions.
 const renderProfilePage = (req, res) => {
   res.render('profile', {
     user: req.userProfile,
