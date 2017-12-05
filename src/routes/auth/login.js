@@ -21,6 +21,7 @@ router.route('/')
       .then((comparison) => {
         if (comparison) {
           req.session.user = user;
+          // what is this line doing? I don't think I'm actually using it.
           res.locals.user = user;
           res.redirect('/profile');
         } else {
