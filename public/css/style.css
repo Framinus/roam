@@ -1,7 +1,17 @@
 /*main and auth pages */
 
+/*styling for the navbar*/
+
+body {
+  background-color: rgb(201, 211, 213) !important;
+}
+
 * {
   box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
 }
 
 ul {
@@ -14,18 +24,20 @@ ul {
 .logo {
   color: #fff;
   display: inline;
+  font-family: 'Rock Salt', cursive;
   font-size: 36px;
+  margin-left: 10px;
   margin-right: 10px;
 }
 
 .link-text {
-  color: #fff;
+  color: rgb(212, 255, 175);
   font-size: 20px;
   margin: 16px;
 }
 
 .link-text:hover {
-  color: rgb(212, 255, 175);
+  color: rgb(152, 206, 244);
   text-decoration: none;
 }
 
@@ -52,7 +64,7 @@ ul {
 
 .dropdown-menu {
   border: 0 !important;
-  margin-left: 136px !important;
+  margin-left: 170px !important;
   margin-top: 0 !important;
   padding: 0 !important;
 }
@@ -82,6 +94,24 @@ ul {
   margin-top: 10px;
 }
 
+/*splash page styling*/
+
+.roam {
+  font-family: 'Rock Salt', cursive;
+}
+
+.welcome {
+  align-items: center;
+  border-radius: 10px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 1.5em;
+  padding: 10px;
+}
+
 .parallax {
   align-items: center;
   background-image: url('https://blog.storage.com/wp-content/uploads/2015/05/How-to-Find-Cheap-New-York-City-Storage-large.jpg');
@@ -95,20 +125,23 @@ ul {
   height: 750px;
 }
 
-.welcome {
-  align-items: center;
-  border-radius: 10px;
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  justify-content: center;
-  margin-top: 1em;
-  padding: 10px;
+.main-link {
+  background-color: rgb(31, 6, 3);
+  border-style: groove;
+  border-width: 2px;
+  color: #fff;
+  font-size: 24px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
+/*auth page styling*/
+
 .auth-form-container {
-  margin-top: 150px;
+  margin-top: 125px;
 }
 
 .auth-form {
@@ -133,18 +166,6 @@ ul {
   margin-top: 140px;
 }
 
-.main-link {
-  background-color: rgb(31, 6, 3);
-  border-style: groove;
-  border-width: 2px;
-  color: #fff;
-  font-size: 24px;
-  margin: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
 
 /*profile page*/
 
@@ -154,7 +175,9 @@ ul {
 }
 
 .profile-column {
-  align-items: center;;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 1px 2px 3px 1px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -179,19 +202,16 @@ ul {
   margin-top: 20px;
 }
 
-#create-post-btn {
-  background-color:  rgb(29, 8, 97);
-  border-radius: 5px;
-  color: #fff;
-}
-
 .posts-row {
   display: flex;
   flex-direction: row;
 }
 
 .post-body {
+  background-color: #fff;
+  box-shadow: 1px 2px 3px 1px;
   margin: 20px;
+  padding: 10px;
 }
 
 .post-city {
@@ -230,6 +250,7 @@ ul {
   background-color:  rgb(29, 8, 97);
   border-radius: 5px;
   color: #fff;
+  margin-top: 10px;
 }
 
 .edit-profile-form {
@@ -380,20 +401,29 @@ ul {
 }
 
 .city-info {
+  background-color: #fff;
+  box-shadow: 1px 2px 3px 1px;
   margin: 20px;
+  padding: 20px;
 }
 
 .city-blurb {
   font-style: italic;
 }
 
+#create-post-btn {
+  background-color:  rgb(29, 8, 97);
+  border-radius: 5px;
+  color: #fff;
+}
+
 .new-review-link {
-  border-bottom: 1px solid grey;
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .posts {
+  background-color: #fff;
+  box-shadow: 1px 2px 3px 1px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -403,12 +433,10 @@ ul {
 
 .post-mini-profile {
   align-items: flex-start;
-  /*border: 1px solid grey;*/
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
-  /*margin: 20px;*/
   min-width: 15%;
   max-width: 15%;
   padding: 10px;
