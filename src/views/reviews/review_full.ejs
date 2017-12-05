@@ -8,9 +8,14 @@
     <p class="mini-username"><%= review.name %></p>
   </div>
   <div class="review-full-container">
-    <h4 class="review-full-title">
-      <%= review.title %>
-    </h4>
+    <div class="review-title-city">
+      <h4 class="review-full-title">
+        <%= review.title %>
+      </h4>
+      <span class="post-city">
+        <%= review.name %>
+      </span>
+    </div>
     <div class="review-full-content">
       <%= review.content %>
     </div>
