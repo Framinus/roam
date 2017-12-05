@@ -79,7 +79,7 @@ ul {
 .logout-btn {
   background-color: #fff;
   border-radius: 5px;
-  margin-top: 2px;
+  margin-top: 10px;
 }
 
 .parallax {
@@ -194,12 +194,19 @@ ul {
   margin: 20px;
 }
 
-.icon-column {
+.post-city {
+  color: #0C712E;
+  font-size: 12px;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+/*.icon-column {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin: 30px;
-}
+}*/
 
 .user {
   margin-bottom: 10px;
@@ -306,11 +313,14 @@ ul {
   margin: 30px;
 }
 
-.review-full-title {
-  margin: 20px;
+.review-full-content {
+  margin-top: 20px;
 }
 
-.review-full-content {
+.review-title-city {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .review-full-buttons {

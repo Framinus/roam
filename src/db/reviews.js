@@ -36,10 +36,12 @@ const getReviewById = (id) => {
 };
 
 const getReviewAndUser = (reviewId) => {
-  return db.one(`SELECT users.name, users.image_url, reviews.id, reviews.user_id, reviews.title, reviews.content
+  return db.one(`SELECT users.name, users.image_url, cities.name, reviews.id, reviews.user_id, reviews.title, reviews.content
       FROM reviews
       JOIN users
       ON reviews.user_id = users.id
+      JOIN cities
+      ON reviews.city_id = cities.id
       WHERE reviews.id=$1
       `, reviewId);
 };

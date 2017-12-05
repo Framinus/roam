@@ -25,7 +25,14 @@
     <% reviews.forEach((review) => { %>
       <div class="posts-row">
         <div class="post-body">
-          <div class="post-title"><a href="/reviews/reviewfull/<%= review.id %>"><%= review.title %></a></div>
+          <div class="post-title">
+            <a href="/reviews/reviewfull/<%= review.id %>">
+              <%= review.title %>
+            </a>
+            <span class="post-city">
+              <%= review.name %>
+            </span>
+          </div>
           <div class="post-content"><%= review.content %></div>
         </div>
       </div>

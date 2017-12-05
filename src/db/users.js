@@ -39,8 +39,11 @@ const getUserProfile = (id) => {
 
 const getUserReviews = (id) => {
   return db.any(`
-    SELECT * FROM reviews
-    WHERE user_id=$1
+    SELECT cities.name, reviews.id, reviews.user_id, reviews.city_id, reviews.title, reviews.content
+    FROM reviews
+    JOIN cities
+    ON cities.id = reviews.city_id
+    WHERE reviews.user_id=$1
     ORDER BY id DESC
     `, id)
     .catch(console.error);
