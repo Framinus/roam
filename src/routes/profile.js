@@ -22,7 +22,7 @@ const findUser = (req, res, next) => {
       })
       .catch(console.error);
   } else {
-    res.redirect('/auth/login');
+    res.redirect('/');
   }
 };
 

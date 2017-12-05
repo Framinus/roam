@@ -17,7 +17,7 @@ router.get('/:id', (req, res) => {
       })
       .catch(console.error);
   } else {
-    res.redirect('/auth/login');
+    res.redirect('/');
   }
 });
 
