@@ -1,15 +1,27 @@
 /*main and auth pages */
 
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  border: none;
+  margin-top: -5px;
+  max-width: 90px;
+  min-width: 90px !important;
+}
+
 .logo {
   color: #fff;
   display: inline;
-  font-size: 20px;
+  font-size: 36px;
   margin-right: 10px;
 }
 
 .link-text {
   color: #fff;
-  margin: 10px;
+  font-size: 20px;
+  margin: 16px;
 }
 
 .link-text:hover {
@@ -22,10 +34,46 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  margin-bottom: -5px;
 }
 
 .navbar-right {
   color: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  border: 0 !important;
+  margin-left: 136px !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+.dropdown-li {
+  background-color: #ccc;
+  border: 1px solid grey;
+  max-width: 90px;
+  padding: 2px;
+}
+
+.dropdown-li a {
+  color: rgb(29, 8, 97);
+}
+
+.dropdown-li a:hover {
+  color: rgb(212, 255, 175);
+}
+
+.down-arrow {
+  font-size: 10px;
 }
 
 .logout-btn {

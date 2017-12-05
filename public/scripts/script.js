@@ -2,6 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("js is working!");
   /* global $ */
 
+  // navbar dropdown menu
+
+  const dropdownEntry = document.querySelector('.dropdown-entry');
+
+  const showDropDown = () => {
+    console.log('this is doing something');
+    if ($('.dropdown-menu').hasClass('hide')) {
+      $('.dropdown-menu').removeClass('hide');
+      $('.dropdown-menu').addClass('show');
+    } else {
+      $('.dropdown-menu').addClass('hide');
+      $('.dropdown-menu').removeClass('show');
+    }
+  };
+
+  dropdownEntry.addEventListener('click', showDropDown);
+
   // jquery for the profile page:
 
   if (top.location.pathname === '/profile') {
