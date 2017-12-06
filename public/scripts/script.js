@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const id = $('.profile-changes-btn').attr('data-id');
       const name = document.querySelector('#edit-name-field').value;
       const currentcity = document.querySelector('.edit-city-field').value;
-      fetch('http://localhost:3000/profile', {
+      fetch('/profile', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain',
