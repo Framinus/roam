@@ -58,6 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
     $(document).on('click', '.profile-changes-btn', editProfile);
   }
 
+  // review-full page
+
+  const editReviewBtn = document.querySelector('.edit-review-btn');
+
+  // editReviewBtn.addEventListener('click', (e) => {
+  //   // e.preventDefault();
+  //
+  // })
+
   // jquery for the posts page
   if (top.location.pathname === '/reviews') {
     const submitNewReviewBtn = document.querySelector('.new-review-submit-btn');
