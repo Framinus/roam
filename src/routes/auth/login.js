@@ -29,7 +29,7 @@ router.route('/')
         }
       })
       .catch((err) => {
-        console.error(err, 'something bad');
+        console.error(err, 'failed to validate user.');
       });
   });
 
