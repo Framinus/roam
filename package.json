@@ -1,6 +1,9 @@
 {
   "name": "roam",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.4.0"
+  },
   "description": "A travel community ",
   "main": "app.js",
   "scripts": {
@@ -8,9 +11,7 @@
     "create:db": "createdb roam",
     "drop:db": "dropdb roam",
     "load:db": "psql roam < ./src/db/schema.sql",
-    "load:session": "psql roam < node_modules/connect-pg-simple/table.sql",
-    "seed:db": "psql roam < ./src/db/seed/seed.sql",
-    "test": "mocha ./test --recursive --exit"
+    "load:session": "psql roam < node_modules/connect-pg-simple/table.sql"
   },
   "repository": {
     "type": "git",
