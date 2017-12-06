@@ -45,7 +45,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(session({
   store: new pgSession({
-    conString: process.env.DATABASE_URL,
+    conString: process.env.DATABASE_URL || "postgres://localhost:5432/roam",
   }),
   key: 'user_sid',
   secret: process.env.SESSION_SECRET,
