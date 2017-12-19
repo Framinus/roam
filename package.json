@@ -9,9 +9,14 @@
   "scripts": {
     "start": "node ./src/server.js",
     "start:dev": "nodemon ./src/server.js",
-    "create:db": "createdb roam",
-    "drop:db": "dropdb roam",
-    "load:db": "psql roam < ./src/db/schema.sql",
+    "db:create": "createdb roam",
+    "db:drop": "dropdb roam",
+    "db:load": "psql roam < ./src/db/schema.sql",
+    "db:reset": "dropdb roam && createdb roam && npm run db:migrate",
+    "db:migrate": "db-migrate up --config src/config/db-migrate.json -e",
+    "db:migrate:create": "db-migrate create init-tables --config src/config/db-migrate.json",
+    "db:migrate:test": "npm run db:migrate test",
+    "db:seed": "psql roam < ./src/db/seed/seed.sql",
     "load:session": "psql roam < node_modules/connect-pg-simple/table.sql"
   },
   "repository": {
