@@ -1,0 +1,20 @@
+{
+  "production": {
+    "driver": "pg",
+    "user": {"ENV": "DB_USER"},
+    "password": {"ENV": "DB_PASSWORD"},
+    "database": {"ENV": "DB_NAME"},
+    "port": {"ENV": "PORT"}
+  },
+  "development": {
+    "driver": "pg",
+    "database": "roam",
+    "port": "5432"
+  },
+  "test": {
+    "driver": "pg",
+    "database": "roam_test",
+    "port": 5432
+  },
+  "sql-file": true
+}
