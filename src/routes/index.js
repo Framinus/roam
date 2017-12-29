@@ -10,7 +10,11 @@ const reviewfull = require('./reviews/reviewfull');
 const forbidden = require('./error_rendering/forbidden');
 
 router.get('/', (req, res) => {
-  res.render('home/index');
+  if (req.session.user) {
+    res.redirect('/profile');
+  } else {
+    res.render('home/index');
+  }
 });
 
 router.post('/', (req, res) => {
