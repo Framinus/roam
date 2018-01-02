@@ -3,6 +3,8 @@ const moment = require('moment');
 const getUserReviews = require('../db/users.js').getUserReviews;
 const getUserProfile = require('../db/users.js').getUserProfile;
 const editUserProfile = require('../db/users.js').editUserProfile;
+const editUserImage = require('../db/users.js').editUserImage;
+const cloudinary = require('cloudinary');
 
 // this function calls the user info from the database and formats it.
 const findUser = (req, res, next) => {
@@ -67,5 +69,18 @@ router.post('/', (req, res) => {
     .catch(console.error);
 });
 
+router.get('/new-image', (req, res) => {
+  res.render('profile/new-image');
+});
+
+router.post('/new-image', (req, res) => {
+  const newImage = req.body.newimage;
+  const userId = req.session.user;
+  return editUserImage(userId, newImage)
+    .then((success) => {
+      res.redirect('/');
+    })
+    .catch(console.error);
+});
 
 module.exports = router;

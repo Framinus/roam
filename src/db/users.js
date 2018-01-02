@@ -75,5 +75,14 @@ const editUserProfile = (id, name, currentcity) => {
     `, [id, name, currentcity]);
 };
 
+const editUserImage = (id, imageUrl) => {
+  return db.one(`
+    UPDATE users
+    SET image_url=$2
+    WHERE id=$1
+    RETURNING *`,
+    [id, imageUrl]);
+};
 
-module.exports = { createUser, deleteUser, editUserProfile, getUserProfile, getUserReviews, getUserProfileAndReviews, saltPassword, validateUser };
+
+module.exports = { createUser, deleteUser, editUserImage, editUserProfile, getUserProfile, getUserReviews, getUserProfileAndReviews, saltPassword, validateUser };

@@ -4,7 +4,10 @@
 
 <div class="profile-container">
   <div class="profile-column">
-    <img class="user user-pic" src="<%= user.image_url %>">
+    <div class="profile-pic-container">
+      <img class="user user-pic" src="<%= user.image_url %>">
+      <a href="./profile/new-image"><button class="edit-pic-btn" type="button">&#10133;</button></a>
+    </div>
     <div class="user user-name"><%= user.name %></div>
     <div class="user current-city"><%= user.current_city %></div>
     <div class="user join-date">Joined: <%= user.join_date %></div>

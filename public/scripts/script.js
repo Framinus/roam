@@ -22,6 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // jquery for the profile page:
 
   if (top.location.pathname === '/profile') {
+    // creates edit button when hovering over profile pic.
+    const editPicBtnShow = () => {
+      $('.edit-pic-btn').show();
+    };
+
+    const editPicBtnHide = () => {
+      $('.edit-pic-btn').hide();
+    };
+
+    $('.profile-pic-container').hover(editPicBtnShow, editPicBtnHide);
+
     $('.edit-profile-form').hide();
     const editProfileBtn = document.getElementById('edit-profile-btn');
     editProfileBtn.addEventListener('click', (e) => {
