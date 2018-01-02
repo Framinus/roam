@@ -231,11 +231,24 @@ ul {
   margin-right: 20px;
 }
 
+.profile-pic-container {
+  display: inline-block;
+  position: relative;
+}
+
 .user-pic {
   border: 1px solid grey;
   height: 125px;
   margin-top: 10px;
   width: 125px;
+}
+
+.edit-pic-btn {
+  position: absolute;
+  background-color: rgb(212, 255, 175);
+  border-radius: 100%;
+  bottom: 15px;
+  right: 25px;
 }
 
 .profile-icon {
@@ -269,6 +282,26 @@ ul {
 
 .post-title a {
   color: rgb(29, 8, 97);
+}
+
+/*profile pic change page*/
+
+.new-image-header {
+  margin: 20px;
+  text-align: center;
+}
+
+.new-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.new-image-form {
+  background-color: #fff;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 50px;
 }
 
 /*review pages */
