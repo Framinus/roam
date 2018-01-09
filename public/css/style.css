@@ -467,7 +467,6 @@ ul {
 
 .post-mini-profile {
   align-items: flex-start;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
