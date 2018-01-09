@@ -458,7 +458,7 @@ ul {
   background-color: #fff;
   box-shadow: 1px 2px 3px 1px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin: 20px;
   padding-top: 10px;
@@ -538,6 +538,16 @@ ul {
 
   .posts-body {
     min-width: 400px;
+  }
+
+  .posts {
+    background-color: #fff;
+    box-shadow: 1px 2px 3px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    padding-top: 10px;
   }
 
 
