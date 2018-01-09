@@ -458,7 +458,8 @@ ul {
   background-color: #fff;
   box-shadow: 1px 2px 3px 1px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
   margin: 20px;
   padding-top: 10px;
@@ -466,13 +467,11 @@ ul {
 
 .post-mini-profile {
   align-items: flex-start;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
-  min-width: 15%;
-  max-width: 15%;
-  padding: 10px;
 }
 
 .post-title {
@@ -483,13 +482,16 @@ ul {
 .post-content {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  flex-grow: 3;
   flex-wrap: wrap;
   margin: 10px;
 }
 
 .mini-image {
   align-self: center;
+  height: 60px;
+  margin: 10px;
+  width: 60px;
 }
 
 .mini-username {
@@ -531,6 +533,7 @@ ul {
     box-shadow: 1px 2px 3px 1px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin: 20px;
     padding-top: 10px;
@@ -545,10 +548,15 @@ ul {
     box-shadow: 1px 2px 3px 1px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin: 20px;
     padding-top: 10px;
   }
 
-
+  .mini-image {
+    align-self: center;
+    height: 80px;
+    width: 80px;
+  }
 }
