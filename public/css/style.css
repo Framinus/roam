@@ -44,7 +44,7 @@ ul {
 .navbar {
   background-color: rgb(7, 15, 28);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: -5px;
@@ -65,8 +65,10 @@ ul {
 
 .dropdown-menu {
   border: 0 !important;
-  margin-left: 170px !important;
-  margin-top: 0 !important;
+  display: flex;
+  flex-direction: column;
+  margin-left: 282px !important;
+  margin-top: -50px !important;
   padding: 0 !important;
 }
 
@@ -172,8 +174,7 @@ ul {
 
 .profile-container {
   display: flex;
-  flex-direction: row;
-  /*flex-wrap: wrap;*/
+  flex-direction: column;
 }
 
 .profile-column {
@@ -194,6 +195,7 @@ ul {
   display: flex;
   flex-direction: column;
   flex-grow: 2;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin: 20px;
 }
@@ -204,17 +206,13 @@ ul {
   margin-top: 20px;
 }
 
-.posts-row {
-  display: flex;
-  flex-direction: row;
-  min-width: 400px;
-}
-
 .post-body {
   background-color: #fff;
   box-shadow: 1px 2px 3px 1px;
-  margin: 20px;
-  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
   padding: 10px;
 }
 
@@ -223,6 +221,11 @@ ul {
   font-size: 12px;
   font-style: italic;
   margin-left: 5px;
+}
+
+.posts-row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .user {
@@ -505,7 +508,18 @@ ul {
   text-align: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 450px) {
+
+  .navbar {
+    flex-direction: row;
+  }
+
+  .dropdown-menu {
+    border: 0 !important;
+    margin-left: 260px !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
 
   .profile-container {
     display: flex;
@@ -521,5 +535,10 @@ ul {
     margin: 20px;
     padding-top: 10px;
   }
+
+  .posts-body {
+    min-width: 400px;
+  }
+
 
 }

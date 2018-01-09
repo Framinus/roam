@@ -26,7 +26,6 @@
   <div class="posts-column">
     <% if (reviews) { %>
     <% reviews.forEach((review) => { %>
-      <div class="posts-row">
         <div class="post-body">
           <div class="post-title">
             <a href="/reviews/reviewfull/<%= review.id %>">
@@ -36,9 +35,10 @@
               <%= review.name %>
             </span>
           </div>
-          <div class="post-content"><%= review.content %></div>
+          <div class="post-content">
+            <%= review.content %>
+          </div>
         </div>
-      </div>
       <% }) %>
       <% } else { %>
           <div class="posts-row">
