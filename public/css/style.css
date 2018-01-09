@@ -64,7 +64,7 @@ ul {
 }
 
 .dropdown-menu {
-  border: 0 !important;
+  border: 2px solid grey !important;
   display: flex;
   flex-direction: column;
   margin-left: 282px !important;
@@ -212,7 +212,7 @@ ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -328,11 +328,11 @@ ul {
 .review {
   margin-top: 2px;
   margin-bottom: 20px;
-  min-width: 400px;
+  min-width: 200px;
 }
 
 .review-content {
-  min-height: 200px;
+  min-height: 250px;
 }
 
 .new-review-submit-btn {
@@ -489,7 +489,7 @@ ul {
 .mini-image {
   align-self: center;
   height: 60px;
-  margin: 10px;
+  margin: 0 20px;
   width: 60px;
 }
 
@@ -538,6 +538,13 @@ ul {
     padding-top: 10px;
   }
 
+  /*this is for the profile page posts.*/
+  .post-body {
+    margin: 20px;
+    min-width: 96%;
+  }
+
+  /*this is for the city page posts.*/
   .posts-body {
     min-width: 400px;
   }
@@ -557,5 +564,11 @@ ul {
     align-self: center;
     height: 80px;
     width: 80px;
+  }
+
+  .review {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    min-width: 400px;
   }
 }
