@@ -220,6 +220,7 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 10px;
+  min-width: 96%;
   padding: 10px;
 }
 
@@ -467,7 +468,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 20px;
   padding-top: 10px;
 }
@@ -499,10 +500,12 @@ ul {
 }
 
 .post-content {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  flex-grow: 4;
+  flex-grow: 7;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin: 10px;
 }
 
@@ -586,7 +589,7 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 20px;
     padding-top: 10px;
   }
