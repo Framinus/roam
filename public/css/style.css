@@ -25,15 +25,16 @@ ul {
   color: #fff;
   display: inline;
   font-family: 'Rock Salt', cursive;
-  font-size: 36px;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-size: 24px;
+  margin-bottom: -5px;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .link-text {
   color: rgb(212, 255, 175);
   font-size: 20px;
-  margin: 16px;
+  margin: 10px;
 }
 
 .link-text:hover {
@@ -45,9 +46,15 @@ ul {
   background-color: rgb(7, 15, 28);
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   margin-bottom: -5px;
+}
+
+.navbar-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .navbar-right {
@@ -67,7 +74,7 @@ ul {
   border: 2px solid grey !important;
   display: flex;
   flex-direction: column;
-  margin-left: 282px !important;
+  margin-left: 9.75em !important;
   margin-top: -50px !important;
   padding: 0 !important;
 }
@@ -470,7 +477,7 @@ ul {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .post-title {
@@ -478,24 +485,27 @@ ul {
   font-weight: bold;
 }
 
-.post-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 3;
-  flex-wrap: wrap;
-  margin: 10px;
-}
 
 .mini-image {
-  align-self: center;
+  align-self: flex-start;
   height: 60px;
   margin: 0 20px;
   width: 60px;
 }
 
 .mini-username {
-  align-self: center;
+  align-self: flex-start;
+  margin-left: 25px;
 }
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 4;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
 
 /*error page css*/
 
@@ -515,11 +525,32 @@ ul {
     flex-direction: row;
   }
 
+  .navbar-left {
+    flex-direction: row;
+  }
+
+  .logo {
+    color: #fff;
+    display: inline;
+    font-family: 'Rock Salt', cursive;
+    font-size: 36px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .link-text {
+    margin: 16px;
+  }
+
   .dropdown-menu {
     border: 0 !important;
-    margin-left: 260px !important;
+    margin-left: 15.5em !important;
     margin-top: 0 !important;
     padding: 0 !important;
+  }
+
+  .dropdown-container {
+    margin-top: 16px;
   }
 
   .profile-container {
@@ -561,9 +592,14 @@ ul {
   }
 
   .mini-image {
-    align-self: center;
+    align-self: flex-start;
     height: 80px;
     width: 80px;
+  }
+
+  .mini-username {
+    align-self: flex-start;
+    margin-left: 35px;
   }
 
   .review {
