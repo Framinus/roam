@@ -473,8 +473,19 @@ ul {
   padding-top: 10px;
 }
 
+.posts-full-review-page {
+  background-color: #fff;
+  box-shadow: 1px 2px 3px 1px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 20px;
+  padding-top: 10px;
+}
+
 .post-mini-profile {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -583,6 +594,18 @@ ul {
     min-width: 400px;
   }
 
+  .posts-review-full-page {
+    background-color: #fff;
+    box-shadow: 1px 2px 3px 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 20px;
+    padding-top: 10px;
+  }
+
+  /*city page posts  */
   .posts {
     background-color: #fff;
     box-shadow: 1px 2px 3px 1px;
