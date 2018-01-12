@@ -4,6 +4,8 @@ Roam is a city review site for travelers made with Node.js, Express, PostgreSQL 
 
 ![Roam City Page](https://github.com/Framinus/roam/blob/master/public/resources/images/roam-site-teaser.png)
 
+![Roam Profile Page](https://github.com/Framinus/roam/blob/master/public/resources/images/roam-profile-page.png)
+
 ## Getting Started
 
 To get a development copy running on your local machine, read below!
