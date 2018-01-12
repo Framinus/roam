@@ -2,7 +2,7 @@
 
 Roam is a city review site for travelers made with Node.js, Express, PostgreSQL and EJS. Users can sign up, create a profile, and review cities on the site.
 
-![Roam City Page](public/resources/images/roam-site-teaser.png)
+![Roam City Page](https://github.com/public/resources/images/roam-site-teaser.png)
 
 ## Getting Started
 
