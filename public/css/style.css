@@ -110,6 +110,11 @@ ul {
   font-family: 'Rock Salt', cursive;
 }
 
+.sub-title {
+  font-family: 'Rock Salt', cursive;
+  margin-top: 10px;
+}
+
 .welcome {
   align-items: center;
   border-radius: 10px;
@@ -132,11 +137,12 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 750px;
+  height: 1200px;
 }
 
 .main-link {
   background-color: rgb(31, 6, 3);
+  border-radius: 10px;
   border-style: groove;
   border-width: 2px;
   color: #fff;
@@ -148,10 +154,32 @@ ul {
   padding-right: 10px;
 }
 
+.login-prompt {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 150px;
+  padding: 40px;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 30px;
+}
+
+.intro-btn {
+  width: 130px;
+}
+
 /*auth page styling*/
 
 .auth-form-container {
-  margin-top: 125px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 150px;
+  padding: 40px;
+  text-align: center;
 }
 
 .auth-form {
@@ -160,20 +188,20 @@ ul {
   justify-content: center;
 }
 
+.auth-text {
+  color: #fff;
+}
+
 .auth-form-link {
   margin: 10px;
 }
 
 .auth-form-btn {
   background-color: rgb(31, 6, 3);
+  border-radius: 10px;
   border: 2px groove white;
   color: #fff;
   margin-top: 10px;
-}
-
-.login-prompt {
-  color: #000;
-  margin-top: 140px;
 }
 
 
